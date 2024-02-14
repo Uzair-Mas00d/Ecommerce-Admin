@@ -16,7 +16,6 @@ import { withSwal } from "react-sweetalert2";
 async function addDataToFireStore(name, parentCategory, editedCategory, properties) {
   if (editedCategory) {
     const ref = doc(db, "categories", editedCategory.id);
-    console.log();
     await updateDoc(ref, {
       name: name,
       parentCategory: parentCategory,
