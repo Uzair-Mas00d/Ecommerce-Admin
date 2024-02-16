@@ -49,7 +49,7 @@ export default function OrdersPage() {
       const ref = doc(db, "orders", order.id);
       await updateDoc(ref, {
         ...order,
-        deliver: "cancle",
+        deliver: "cancel",
       });
       const data = await getDataFromFireStore();
       setOrders(data);
@@ -106,7 +106,7 @@ export default function OrdersPage() {
                     onClick={() => cancleOrder(order)}
                     className="btn-default mt-2"
                   >
-                    Cancle
+                    Cancel
                   </button>
                 </td>
               </tr>
